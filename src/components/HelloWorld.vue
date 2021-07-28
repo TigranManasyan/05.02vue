@@ -25,8 +25,15 @@
 <!--        </template>-->
 <!--      </b-table>-->
 <!--    </b-container>-->
-  <nav-bar />
-  <Square width="100" height="100" bgcolor="red" />
+<!--  <nav-bar />-->
+<!--  <Square width="100" height="100" bgcolor="red" />-->
+
+    <h1>{{ $t('message.hello') }}</h1>
+
+    <b-button variant="link" @click="changeLanguage('en')"> EN </b-button>
+    <b-button variant="link" @click="changeLanguage('ru')"> RU </b-button>
+    <b-button variant="link" @click="changeLanguage('am')"> AM </b-button>
+
   </div>
 
 </template>
@@ -74,6 +81,9 @@ export default {
     },
     listItem(id) {
       alert(id);
+    },
+    changeLanguage(lang) {
+      this.$i18n.locale = lang;
     }
   }
 }

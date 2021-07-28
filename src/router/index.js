@@ -8,6 +8,7 @@ import User from "../views/dashboard/User";
 import Form from "../views/dashboard/Form";
 import List from "../views/dashboard/List";
 import StoreUsers from "../views/dashboard/StoreUsers";
+import FormValid from "../views/dashboard/FormValid";
 
 Vue.use(Router)
 
@@ -22,5 +23,6 @@ export default new Router({
     { path: '/form', name:'Form', component:Form},
     { path: '/list', name:'List', component:List},
     { path: '/store_users', name:'StoreUsers', component:StoreUsers},
+    { path: '/form_valid', name:'FormV', component:FormValid},
   ]
 })
